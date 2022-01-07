@@ -41,7 +41,7 @@ footer {
 
 .content {
   padding: 20px 0px;
-  display: flex;
+  /* display: flex; */
   /* flex-wrap: wrap; */
   /* @media (min-width: 600px) {
     .your-div{
@@ -60,14 +60,27 @@ ul{
 /* ================================== */
 
 .tile {
+  margin: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7%;
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+
 }
 .tile img {
+  max-width :100%;
+  object-fit:cover;
+  border-radius: 4%;
+  transition: all .1s ease;
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
 }
 .tile img:hover {
+  filter: brightness(0.5);
+  transform: scale(1.05);
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
 }
@@ -75,10 +88,19 @@ ul{
 /* Hint: Notice the position:absolute and z-index properties. */
 /* Think about how those in relation to the existing "tile" classes. */
 .tile-text {
+  display: flex;
+  color: white;
   position: absolute;
   z-index: 1;
   text-transform: uppercase;
+  font-size: 20px;
   letter-spacing: 2px;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .hero-image {
@@ -116,6 +138,14 @@ ul{
   position: center;
 
 }
+/* .mumbai{
+  width:296px !important;
+  height:404px !important;
+} */
+/* .img-thumbnail{
+  width:224px !important;
+  height:304px !important;
+} */
 /* @media only screen and (max-width: 468px){
   h1{
     white-space: nowrap;
@@ -126,11 +156,6 @@ ul{
     font-size:4vw;
   } 
 } */
-#grid-main{
-  margin: 2%;
-}
-
-
 .nav-link {
   margin-right: 36px;
 }
