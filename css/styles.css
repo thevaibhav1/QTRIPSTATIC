@@ -165,49 +165,86 @@ ul{
 /* ================================== */
 
 .adventure-card {
- 
-  height:100% !important;
-
   /* TODO: MODULE_ADVENTURES_GRID */
   /* 1. Fill in the required properties. */
+height: 20rem;
+position: relative;
+display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    flex-direction: column;
+  
 
+}
+.card-body adventure-card-body {
+  justify-content: space-between;
+  overflow: hidden;
 }
 .adventure-card img {
-  height:80% !important;
+ 
+
   /* TODO: MODULE_ADVENTURES_GRID */
   /* 1. Fill in the required properties. */
+  width: 100%;
+  height: 40vw;
+  object-fit: cover;
+  overflow: hidden;
+}
+.adventure-images {
+  overflow: hidden;
 }
 .adventure-card img:hover {
-  filter: brightness(0.4);
-  
   /* TODO: MODULE_ADVENTURES_GRID */
   /* 1. Fill in the required properties. */
-}
-.adventure-card h5,p{
-  text-align:center;
-}
+  filter: brightness(0.5);
+  transform: scale(1.05);
 
+}
+@media only screen and (max-width: 768px) {
+  
+  .card-body {
+    text-align: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+  }
+  .adventure-card {
+    height: 100%;
+  }
+}
 /* ================================== */
 /* Adventure details page CSS */
 /* ================================== */
-
 .adventure-detail-card {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
-
+border: 1px solid gray;
+border-radius: 4px;
+padding: 16px;
 }
 
 .adventure-card-image {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
+  width: 100%;
+  height: 100%;
 }
 .adventure-card-image:hover {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
+  filter: brightness(0.6);
+  cursor: pointer;
 }
 .experience-content ul li {
   margin-left: 16px;
   padding: 0;
+}
+ul {
+  display: block;
+    list-style-type: disc;
 }
 
 @media only screen and (min-width: 768px) {
